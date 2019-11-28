@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="h-100">
+
+  {%- include head.html -%}
+
+  <body class="d-flex flex-column h-100">
+
+    {%- include header.html -%}
+
+    <main>
+      <div class="container-fluid">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+    {%- include scripts.html -%}
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    {%- if page.title -%}
+      {{ page.title | escape }} | {{ site.title | escape }}
+    {%- else -%}
+      {{ site.title | escape }}
+    {%- endif -%}
+  </title>
+
+  <meta name="author" content="{{ site.author | escape }}" />
+
+  {%- if page.subtitle -%}
+    <meta name="description" content="{{ page.subtitle | escape }}">
+  {%- else -%}
+    <meta name="description" content="The Pao Spirit Club">
+  {%- endif -%}
+
+  <link rel="stylesheet" href="{{ "/assets/vendors/bootstrap/bootstrap.min.css" | relative_url }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
+</head>

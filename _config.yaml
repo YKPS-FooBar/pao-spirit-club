@@ -1,0 +1,46 @@
+title: Pao Spirit Club
+
+url: http://thomaszhu.cn
+
+baseurl: ""
+
+author: Sandy Wu
+
+social_links:
+  pinterest: P
+  facebook: F
+  twitter: T
+  instagram: I
+
+date_format: "%B %-d, %Y"
+
+timezone: China/Shanghai
+
+permalink: /:title/
+
+markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - .sass_cache/
+  - .jekyll_cache/
+  - .gitignore
+  - CNAME
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - LICENSE
+  - README.md
