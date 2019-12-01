@@ -7,55 +7,18 @@ layout: default
 {%- endif -%}
 
 <div class="row mx-3">
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl mt-2 px-1">
-    <div class="card text-center text-white bg-dark">
-      <img src="@" class="card-img" height="700" alt="A very big image">
-      <div class="card-img-overlay">
-        <h2 class="card-title" style="margin-top: 30%;">Volleyball</h2>
-        <a href="{{ "/volleyball" | relative_url }}" class="btn bg-transparent text-light border">View</a>
+  {%- assign cards = "volleyball, basketball, football, frisbee, swimming" | split: ", " -%}
+  {%- for card in cards -%}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl mt-2 px-1">
+      <div class="card text-center text-white bg-dark card-hover-thingy">
+        <img src="/assets/images/{{ card }}-cover.jpg" class="card-img" height="700" alt="{{ card | capitalize }} cover">
+        <a href="{{ "/" | append: card | relative_url }}" class="card-img-overlay text-decoration-none text-reset">
+          <h2 class="card-title" style="margin-top: 30%;">{{ card | capitalize }}</h2>
+          <button class="btn bg-transparent text-light border">View</button>
+        </a>
       </div>
     </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl mt-2 px-1">
-    <div class="card text-center text-white bg-dark">
-      <img src="@" class="card-img" height="700" alt="A very big image">
-      <div class="card-img-overlay">
-        <h2 class="card-title" style="margin-top: 30%;">Basketball</h2>
-        <a href="{{ "/basketball" | relative_url }}" class="btn bg-transparent text-light border">View</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl mt-2 px-1">
-    <div class="card text-center text-white bg-dark">
-      <img src="@" class="card-img" height="700" alt="A very big image">
-      <div class="card-img-overlay">
-        <h2 class="card-title" style="margin-top: 30%;">Football</h2>
-        <a href="{{ "/football" | relative_url }}" class="btn bg-transparent text-light border">View</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl mt-2 px-1">
-    <div class="card text-center text-white bg-dark">
-      <img src="@" class="card-img" height="700" alt="A very big image">
-      <div class="card-img-overlay">
-        <h2 class="card-title" style="margin-top: 30%;">Frisbee</h2>
-        <a href="{{ "/frisbee" | relative_url }}" class="btn bg-transparent text-light border">View</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl mt-2 px-1">
-    <div class="card text-center text-white bg-dark">
-      <img src="@" class="card-img" height="700" alt="A very big image">
-      <div class="card-img-overlay">
-        <h2 class="card-title" style="margin-top: 30%;">Swimming</h2>
-        <a href="{{ "/swimming" | relative_url }}" class="btn bg-transparent text-light border">View</a>
-      </div>
-    </div>
-  </div>
+  {%- endfor -%}
 </div>
 
 {{ content }}

@@ -1,6 +1,6 @@
 title: Pao Spirit Club
 
-url: http://thomaszhu.cn
+url: ""
 
 baseurl: pao-spirit-club
 
@@ -16,7 +16,7 @@ date_format: "%B %-d, %Y"
 
 timezone: China/Shanghai
 
-permalink: /:title/
+permalink: /:title
 
 markdown: kramdown
 
