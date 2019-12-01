@@ -7,3 +7,7 @@
     </li>
   </ul>
 </nav>
+
+{%- if page.navtitle -%}
+    <h1 class="text-center mb-3">{{ page.navtitle | escape }}</h1>
+{%- endif -%}

@@ -1,7 +1,37 @@
 .card-hover-thingy {
-    transition: box-shadow 0.5s ease;
+    transition: 0.5s ease;
 }
 
 .card-hover-thingy:hover {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    transform: scale(1.07);
+    z-index: 1;
+}
+
+.background-image {
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+.background-image-volleyball {
+    background-image: url('/assets/images/volleyball-cover.jpg');
+    background-position-x: calc(50% - 135px);
+}
+
+.background-image-basketball {
+    background-image: url('/assets/images/basketball-cover.jpg');
+}
+
+.background-image-football {
+    background-image: url('/assets/images/football-cover.jpg');
+}
+
+.background-image-frisbee {
+    background-image: url('/assets/images/frisbee-cover.jpg');
+}
+
+.background-image-swimming {
+    background-image: url('/assets/images/swimming-cover.jpg');
+    background-position-x: calc(50% + 50px);
 }
