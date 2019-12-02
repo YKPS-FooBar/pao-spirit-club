@@ -41,23 +41,23 @@
 }
 
 .background-image-volleyball {
-    background-image: url('{{ "/assets/images/volleyball-cover.jpg" | relative_url }}');
+    background-image: url('{{ "/assets/images/volleyball-cover-reduced.jpg" | relative_url }}');
     background-position-x: calc(50% - 135px);
 }
 
 .background-image-basketball {
-    background-image: url('{{ "/assets/images/basketball-cover.jpg" | relative_url }}');
+    background-image: url('{{ "/assets/images/basketball-cover-reduced.jpg" | relative_url }}');
 }
 
 .background-image-football {
-    background-image: url('{{ "/assets/images/football-cover.jpg" | relative_url }}');
+    background-image: url('{{ "/assets/images/football-cover-reduced.jpg" | relative_url }}');
 }
 
 .background-image-frisbee {
-    background-image: url('{{ "/assets/images/frisbee-cover.jpg" | relative_url }}');
+    background-image: url('{{ "/assets/images/frisbee-cover-reduced.jpg" | relative_url }}');
 }
 
 .background-image-swimming {
-    background-image: url('{{ "/assets/images/swimming-cover.jpg" | relative_url }}');
+    background-image: url('{{ "/assets/images/swimming-cover-reduced.jpg" | relative_url }}');
     background-position-x: calc(50% + 40px);
 }
