@@ -1,13 +1,13 @@
 <nav class="navbar navbar-light">
-  <a class="navbar-brand" href="{{ "/" | relative_url }}" style="font-variant: small-caps; font-size: 2em">{{ site.title | escape }}</a>
+  <a class="navbar-brand serif" href="{{ "/" | relative_url }}" style="font-variant: small-caps; font-size: 2em">{{ site.title | escape }}</a>
 
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a class="nav-link" href="{{ "/about" | relative_url }}" style="font-size: 1.5em">About</a>
+      <a class="nav-link serif" href="{{ "/about" | relative_url }}" style="font-size: 1.5em">About</a>
     </li>
   </ul>
 </nav>
 
 {%- if page.navtitle -%}
-    <h1 class="text-center mb-3">{{ page.navtitle | escape }}</h1>
+    <h1 class="text-center mb-3 serif">{{ page.navtitle | escape }}</h1>
 {%- endif -%}
