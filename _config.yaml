@@ -20,19 +20,6 @@ permalink: /:title
 
 markdown: kramdown
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-  -
-    scope:
-      path: ""
-    values:
-      layout: page
-
 exclude:
   - .sass_cache/
   - .jekyll_cache/
