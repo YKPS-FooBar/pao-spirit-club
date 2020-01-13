@@ -1,4 +1,4 @@
 ---
 layout: home
-navtitle: Gallery
+title: Gallery
 ---
