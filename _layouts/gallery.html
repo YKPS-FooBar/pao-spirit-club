@@ -2,12 +2,14 @@
 layout: default
 ---
 
+<!-- TODO, reduce size -->
+{%- assign images = site.static_files | where: "field", page.field -%}
+
 <div class="row mx-3">
-  {%- for image in page.images -%}
+  {%- for image in images -%}
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-2 px-1">
       <div class="card text-center text-white bg-dark rounded-0 border-0 card-hover-thingy square hover-shade">
-        <div class="background-image card-img fill" style="background-image: url({{ "/assets/images/" | append: image | append: "-reduced.jpg" | relative_url }});"></div>
-        <!-- TODO: go to #id-of-this-image and this somehow does some crazy javascript -->
+        <div class="background-image card-img fill" style="background-image: url({{ image.path | relative_url }});"></div>
         <a class="gallery-expand card-img-overlay text-decoration-none text-reset" data-toggle="modal" data-target="#image-{{ forloop.index0 }}"></a>
       </div>
     </div>
@@ -15,7 +17,7 @@ layout: default
     <div class="modal fade" id="image-{{ forloop.index0 }}" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
-          <img class="w-100" src="{{ "/assets/images/" | append: image | append: ".jpg" | relative_url }}">
+          <img class="w-100" src="{{ image.path | relative_url }}">
         </div>
       </div>
     </div>

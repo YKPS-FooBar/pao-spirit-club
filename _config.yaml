@@ -20,6 +20,28 @@ permalink: /:title
 
 markdown: kramdown
 
+defaults:
+  - scope:
+      path: photos/volleyball
+    values:
+      field: volleyball
+  - scope:
+      path: photos/basketball
+    values:
+      field: basketball
+  - scope:
+      path: photos/football
+    values:
+      field: football
+  - scope:
+      path: photos/frisbee
+    values:
+      field: frisbee
+  - scope:
+      path: photos/swimming
+    values:
+      field: swimming
+
 exclude:
   - .sass_cache/
   - .jekyll_cache/
