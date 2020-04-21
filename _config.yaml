@@ -53,3 +53,4 @@ exclude:
   - node_modules/
   - LICENSE
   - README.md
+  - create_thumbnails.py
