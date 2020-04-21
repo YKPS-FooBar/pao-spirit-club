@@ -13,14 +13,14 @@ layout: default
     {%- endif -%}
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-2 px-1">
       <div class="card text-center text-white bg-dark rounded-0 border-0 card-hover-thingy square hover-shade">
-        <div class="background-image card-img fill" style="background-image: url({{ thumbnail | relative_url }});"></div>
+        <div class="background-image card-img fill rounded-0" style="background-image: url({{ thumbnail | relative_url }});"></div>
         <a class="gallery-expand card-img-overlay text-decoration-none text-reset" data-toggle="modal" data-target="#image-{{ forloop.index0 }}"></a>
       </div>
     </div>
 
     <div class="modal fade" id="image-{{ forloop.index0 }}" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content rounded-0 border-0">
           <img class="w-100" data-src="{{ image.path | relative_url }}">
         </div>
       </div>
