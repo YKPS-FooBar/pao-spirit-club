@@ -6,9 +6,14 @@ layout: default
 
 <div class="row mx-3">
   {%- for image in images -%}
+    {%- assign thumbnail = image.path | replace_first: "photos", "photos/thumbnails" -%}
+    {%- assign exists = site.static_files | where: "path", thumbnail | size -%}
+    {%- if exists == 0 -%}
+      {%- assign thumbnail = image.path -%}
+    {%- endif -%}
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-2 px-1">
       <div class="card text-center text-white bg-dark rounded-0 border-0 card-hover-thingy square hover-shade">
-        <div class="background-image card-img fill" style="background-image: url({{ "/photos/thumbnails/" | append: image.field | append: "/" | append: image.name | relative_url }});"></div>
+        <div class="background-image card-img fill" style="background-image: url({{ thumbnail | relative_url }});"></div>
         <a class="gallery-expand card-img-overlay text-decoration-none text-reset" data-toggle="modal" data-target="#image-{{ forloop.index0 }}"></a>
       </div>
     </div>
