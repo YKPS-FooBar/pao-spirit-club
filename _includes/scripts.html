@@ -1,2 +1,10 @@
 <script src="{{ "/assets/vendors/jquery/jquery.min.js" | relative_url }}"></script>
 <script src="{{ "/assets/vendors/bootstrap/bootstrap.bundle.min.js" | relative_url }}"></script>
+<script>
+    $('.modal').each((index, modal) => {
+        $(modal).one('show.bs.modal', () => {
+            var $image = $(modal).find('img');
+            $image.attr('src', $image.data('src'));
+        });
+    });
+</script>
