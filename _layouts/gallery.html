@@ -21,7 +21,7 @@ layout: default
     <div class="modal fade" id="image-{{ forloop.index0 }}" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
-          <img class="w-100" src="{{ thumbnail | relative_url }}" data-src="{{ image.path | relative_url }}">
+          <img class="w-100" data-src="{{ image.path | relative_url }}">
         </div>
       </div>
     </div>
